@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Dancing+Script&family=Libre+Baskerville&family=Montserrat:wght@300;400&family=Oswald:wght@300&family=Passions+Conflict&family=Sevillana&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: caveat;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+nav {
+    height: 8vh;
+    background: rgba(0, 128, 26, 0.249);
+    display: flex;
+}
+
+nav .openMenu {
+    display: none;
+}
+
+nav .hamburger .closeMenu,
+.icons i {
+    display: none;
+}
+
+nav .logo {
+    cursor: pointer;
+}
+
+nav .logo h1 {
+    color: midnightblue;
+    font-size: 50px;
+    letter-spacing: 3.3px;
+    margin-left: 70px;
+}
+
+nav .hamburger {
+    display: flex;
+    list-style-type: none;
+    width: 40%;
+    height: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+nav .hamburger li a {
+    text-decoration: none;
+    color: mintcream;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 15px;
+}
+
+nav .hamburger li a:hover {
+    color: midnightblue;
+    transition: 0.5s;
+}
+
+@media screen and (max-width:800px) {
+
+    /*.line{
+        width: 30px;
+        height: 4px;
+        background: mintcream;
+        margin: 4px;
+    }*/
+    nav {
+        position: relative;
+        height: 80px;
+    }
+
+    nav .logo {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    nav .hamburger {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgb(155, 203, 165);
+        transition: top 1s ease;
+        display: none;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    nav .openMenu {
+        display: block;
+        right: 20px;
+        font-size: 1.5rem;
+        top: 25px;
+        position: absolute;
+        color: #fff;
+    }
+
+    nav .hamburger .closeMenu {
+        color: rgb(255, 255, 255);
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 20px;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    nav .hamburger li {
+        padding: 40px;
+    }
+
+    nav .hamburger li a:hover {
+        background: none;
+        color: midnightblue;
+        font-size: 1.6rem;
+    }
+
+    .hamburger .icons i {
+        display: inline-block;
+        padding: 12px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .hamburger .fa-facebook:hover {
+        color: midnightblue;
+    }
+
+    .hamburger .fa-instagram:hover {
+        color: orange;
+    }
+
+    .hamburger .fa-envelope:hover {
+        color: rgb(250, 53, 86)
+    }
+
+    /*.about-content .about-image{
+        width: 40%;
+        margin-left: 20px;
+    }
+    .about-content .about-text{
+        margin-left: 20px;
+    }*/
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(chi-chen-oBoELXgJR1w-unsplash.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.home .content {
+    margin-bottom: 260px;
+    max-width: 100rem;
+    margin-left: 2rem;
+}
+
+.home .content h1 {
+    font-size: 6.5vmin;
+    text-transform: uppercase;
+    color: rgb(19, 19, 90);
+}
+
+.home .content p {
+    font-size: 1.1rem;
+    color: rgb(231, 160, 29);
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 0.3rem #fff;
+    margin-bottom: 1%;
+}
+
+.ctn {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-left: 30%;
+    text-decoration: none;
+    background-color: rgb(231, 160, 29);
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ctn:hover {
+    transition: 0.3s;
+    color: midnightblue;
+}
+
+.about {
+    margin-bottom: 100px;
+    cursor: pointer;
+}
+
+.title {
+    margin: 60px 0;
+}
+
+.title h2 {
+    width: 100%;
+    text-align: center;
+    letter-spacing: 7px;
+    font-size: 40px;
+    color: rgb(231, 160, 29);
+}
+
+.title h2::after {
+    content: "";
+    width: 75px;
+    height: 2.5px;
+    background-color: rgb(231, 160, 29);
+    margin: 0 auto;
+    display: block;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-image {
+    width: 28%;
+    margin-left: 50px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.about-image img:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+    opacity: 0.95;
+}
+
+.about-text {
+    width: 55%;
+}
+
+.about-text h4 {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 5vmin;
+    color: midnightblue;
+    letter-spacing: 2px;
+}
+
+#asterisk {
+    color: midnightblue;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.about-text p {
+    text-align: center;
+    font-size: 3.2vmin;
+    color: rgb(171, 171, 171);
+    text-shadow: 0 0 0.3rem white;
+}
+
+/*section{
+    width: 80%;
+    margin: 80px auto;
+}*/
+.products-title {
+    margin: 60px 0;
+    cursor: pointer;
+}
+
+.products-title h2 {
+    width: 100%;
+    text-align: center;
+    letter-spacing: 7px;
+    font-size: 40px;
+    color: rgb(231, 160, 29);
+}
+
+.products-title h2::after {
+    content: "";
+    width: 170px;
+    height: 2.5px;
+    background-color: rgb(231, 160, 29);
+    margin: 0 auto;
+    display: block;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.row .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    margin-top: 15px;
+}
+
+.row .col img {
+    width: 250px;
+    height: 200px;
+    border-radius: 25px;
+}
+
+.row .col img:hover {
+    transform: scale(1.13);
+    transition: 0.2s ease-in-out;
+    opacity: 0.95;
+}
+
+.row .col h4 {
+    font-size: 20px;
+    letter-spacing: 1.1px;
+    color: rgb(3, 3, 69);
+    margin: 15px auto;
+}
+
+.row .col p {
+    color: rgb(171, 171, 171);
+    letter-spacing: 0.7px;
+    text-align: justify;
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.products .btn {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    text-decoration: none;
+    background-color: rgb(231, 160, 29);
+    font-family: libre baskerville;
+    border-radius: 9px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 7px;
+}
+
+.products .btn:hover {
+    transition: 0.3s;
+    color: midnightblue;
+}
+
+.contact {
+    margin-top: 155px;
+
+    color: rgb(231, 160, 29);
+    text-align: center;
+    cursor: pointer;
+}
+
+.contact h2 {
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+
+form {
+    margin: 25px auto;
+    max-width: 800px;
+    color: rgb(231, 160, 29);
+}
+
+input,
+textarea,
+button {
+    color: midnightblue;
+    border: none;
+    width: 55%;
+    padding: 15px 10px;
+    margin: 2 0;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+textarea {
+    height: 120px;
+}
+
+button {
+    font-size: 1.5em;
+    letter-spacing: 2.5px;
+    font-weight: bold;
+    background: rgba(0, 128, 26, 0.249);
+    color: rgb(231, 160, 29);
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgba(0, 128, 26, 0.456);
+    color: rgb(255, 162, 0);
+    transition: 0.3s ease-in-out;
+}
+
+.contact-item {
+    padding: 15px 5px;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.contact-item p {
+    margin-top: 2px;
+    font-size: 1.4rem;
+    letter-spacing: 1.1px;
+    color: #fff;
+}
+
+.footer-box {
+    min-height: 100px;
+    width: 100%;
+    background: rgba(0, 128, 26, 0.249);
+    margin: 0;
+    padding: 20px 80px;
+    text-align: center;
+}
+
+.footer-icons {
+    width: 100%;
+    text-align: center;
+}
+
+.footer-icons a {
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.footer-icons a:hover {
+    transform: scale(1.5);
+    transition: 0.1s;
+}
+
+@media (max-width:1325px) {
+    .row .col {
+        margin: 20px auto;
+    }
+}
+
+@media (max-width:1100px) {
+    .row {
+        flex-direction: column;
+    }
+}
